@@ -10,6 +10,6 @@ COPY pyproject.toml .python-version uv.lock ./
 #RUN uv sync --locked installs dependencies from the uv.lock file, the exact same dependencies that are in our virtual environment. It's faster than pip install
 RUN uv sync --locked
 
-COPY pipeline.py .
+COPY ingest_data.py .
 
-ENTRYPOINT ["python", "pipeline.py"] 
+ENTRYPOINT ["python", "ingest_data.py"] 
